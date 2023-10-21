@@ -1,0 +1,15 @@
+{% extends 'staff_main.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container mt-5">
+        <h1 class="display-4 text-center">Category List</h1>
+        <ul class="list-group mt-3">
+            {% for category in categories %}
+                <li class="list-group-item">{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}
